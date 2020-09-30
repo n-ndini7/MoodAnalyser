@@ -2,7 +2,7 @@ package com.capgemini;
 
 import java.util.*;
 
-//Refactor TC 1..2 - test case for happy mood
+//UC2 - throw handle exception for null input 
 public class MoodAnalyser {
 	public static Scanner sc;
 	public static String message;
@@ -13,17 +13,21 @@ public class MoodAnalyser {
 		this.message=message;
 	}
 	public String analyseMood() {
-		if (message.contains("Happy")) {
+		try {
+		if (message.contains("Sad")) 
 			return "SAD";
-		} else {
+			else  
 			return "HAPPY";
+		}
+		catch(NullPointerException e) {
+			return "Wrong input entered. Exception thrown!!";
 		}
 	}
 
 	public static void main(String[] args) {
 		sc = new Scanner(System.in);
 		System.out.println("Enter your mood: ");
-		String message = sc.nextLine();
+		String message = null;
 		MoodAnalyser obj = new MoodAnalyser(message);
 		System.out.println(obj.analyseMood());
 	}
