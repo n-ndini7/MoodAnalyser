@@ -8,9 +8,9 @@ import org.junit.rules.ExpectedException;
 public class MoodAnalyserTest {
 	@Test
 	public void moodAnalysis() {
-		MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Any Mood");
+		MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Sad Mood");
 		String mood = moodAnalyser.analyseMood();
-		Assert.assertThat(mood, CoreMatchers.is("HAPPY"));
+		Assert.assertThat(mood, CoreMatchers.is("SAD"));
 	}
 
 }
