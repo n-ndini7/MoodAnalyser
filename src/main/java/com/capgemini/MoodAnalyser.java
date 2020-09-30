@@ -2,7 +2,7 @@ package com.capgemini;
 
 import java.util.*;
 
-//TC1.1 - test for sad mood
+//TC1.2 - test for happy mood
 public class MoodAnalyser {
 	public static Scanner sc;
 
