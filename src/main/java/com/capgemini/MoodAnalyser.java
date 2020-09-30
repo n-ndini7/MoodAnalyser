@@ -2,11 +2,17 @@ package com.capgemini;
 
 import java.util.*;
 
-//TC1.2 - test for happy mood
+//Refactor UC1 - default and parameterized constructors 
 public class MoodAnalyser {
 	public static Scanner sc;
-
-	public String analyseMood(String message) {
+	public static String message;
+	public MoodAnalyser() {
+		
+	}
+	public MoodAnalyser(String message) {
+		this.message=message;
+	}
+	public String analyseMood() {
 		if (message.contains("Sad")) {
 			return "SAD";
 		} else {
@@ -18,8 +24,8 @@ public class MoodAnalyser {
 		sc = new Scanner(System.in);
 		System.out.println("Enter your mood: ");
 		String message = sc.nextLine();
-		MoodAnalyser obj = new MoodAnalyser();
-		System.out.println(obj.analyseMood(message));
+		MoodAnalyser obj = new MoodAnalyser(message);
+		System.out.println(obj.analyseMood());
 	}
 
 }
