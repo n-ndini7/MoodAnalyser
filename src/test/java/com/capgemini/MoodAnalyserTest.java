@@ -7,10 +7,14 @@ import org.junit.rules.ExpectedException;
 
 public class MoodAnalyserTest {
 	@Test
-	public void moodAnalysis() {
-		MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Happy mood");
+	public void moodAnalysis() throws NullPointerException {
+		MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+		// for null input 
 		String mood = moodAnalyser.analyseMood();
-		Assert.assertThat(mood, CoreMatchers.is("SAD"));
+		ExpectedException x = ExpectedException.none();
+		x.expect(NullPointerException.class);
+		Assert.assertEquals("Wrong input entered. Exception thrown!!", mood);
 	}
+
 
 }
