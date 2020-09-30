@@ -8,18 +8,12 @@ import org.junit.rules.ExpectedException;
 
 public class MoodAnalyserTest {
 	@Test
-	public void moodAnalysis() throws NullPointerException {
-		MoodAnalyser moodAnalyser = new MoodAnalyser(null);
-
-	}
-
-	@Test
-	public void moodAnalysis_throws_nullException() {
-		MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+	public void moodAnalysis() {
+		MoodAnalyser obj = new MoodAnalyser(null);
 		try {
-			moodAnalyser.analyseMood();
+			obj.analyseMood();
 		} catch (MoodAnalyserException e) {
-			assertEquals(MoodAnalyserException.ExceptionType.ENTERED_NULL, e.type);
+			Assert.assertEquals(MoodAnalyserException.ExceptionType.ENTERED_NULL, e.type);
 		}
 	}
 
