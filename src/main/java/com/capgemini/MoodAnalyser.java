@@ -2,7 +2,7 @@ package com.capgemini;
 
 import java.util.*;
 
-//Refactor UC1 - default and parameterized constructors 
+//Refactor TC 1..2 - test case for happy mood
 public class MoodAnalyser {
 	public static Scanner sc;
 	public static String message;
@@ -13,7 +13,7 @@ public class MoodAnalyser {
 		this.message=message;
 	}
 	public String analyseMood() {
-		if (message.contains("Sad")) {
+		if (message.contains("Happy")) {
 			return "SAD";
 		} else {
 			return "HAPPY";
