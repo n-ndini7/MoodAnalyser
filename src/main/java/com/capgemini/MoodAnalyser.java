@@ -2,15 +2,15 @@ package com.capgemini;
 
 import java.util.*;
 
-//UC1 - given a message , ability to analyse happy or sad mood
+//TC1.1 - test for sad mood
 public class MoodAnalyser {
 	public static Scanner sc;
 
 	public String analyseMood(String message) {
 		if (message.contains("Sad")) {
-			return "Sad Mood";
+			return "SAD";
 		} else {
-			return "Happy Mood";
+			return "HAPPY";
 		}
 	}
 
@@ -23,3 +23,5 @@ public class MoodAnalyser {
 	}
 
 }
+
+
