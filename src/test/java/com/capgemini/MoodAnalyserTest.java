@@ -1,5 +1,6 @@
 package com.capgemini;
 
+import static org.junit.Assert.*;
 import org.hamcrest.CoreMatchers;
 import org.junit.*;
 import org.junit.Test;
@@ -7,14 +8,13 @@ import org.junit.rules.ExpectedException;
 
 public class MoodAnalyserTest {
 	@Test
-	public void moodAnalysis() throws NullPointerException {
-		MoodAnalyser moodAnalyser = new MoodAnalyser(null);
-		// for null input 
-		String mood = moodAnalyser.analyseMood();
-		ExpectedException x = ExpectedException.none();
-		x.expect(NullPointerException.class);
-		Assert.assertEquals("HAPPY", mood);
+	public void moodAnalysis() {
+		MoodAnalyser obj = new MoodAnalyser(null);
+		try {
+			obj.analyseMood();
+		} catch (MoodAnalyserException e) {
+			Assert.assertEquals(MoodAnalyserException.ExceptionType.ENTERED_NULL, e.type);
+		}
 	}
-
 
 }
