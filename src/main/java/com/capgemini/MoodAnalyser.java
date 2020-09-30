@@ -20,7 +20,8 @@ public class MoodAnalyser {
 			return "HAPPY";
 		}
 		catch(NullPointerException e) {
-			return "Wrong input entered. Exception thrown!!";
+			System.out.println("Wrong input entered. Exception thrown!!");
+			return "HAPPY";
 		}
 	}
 

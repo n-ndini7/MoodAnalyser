@@ -13,7 +13,7 @@ public class MoodAnalyserTest {
 		String mood = moodAnalyser.analyseMood();
 		ExpectedException x = ExpectedException.none();
 		x.expect(NullPointerException.class);
-		Assert.assertEquals("Wrong input entered. Exception thrown!!", mood);
+		Assert.assertEquals("HAPPY", mood);
 	}
 
 
